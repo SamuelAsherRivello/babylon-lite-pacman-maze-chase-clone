@@ -1,4 +1,7 @@
 .setup/
+.work/
+test-results/
+playwright-report/
 
 # Node and Vite output.
 node_modules/

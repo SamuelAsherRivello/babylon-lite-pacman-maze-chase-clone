@@ -2,15 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GitHub Repository Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#05070e" />
+    <meta name="description" content="Neon Nibbler — three original neon mazes, four relentless rivals, one electric arcade chase. Play with keyboard or touch." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ffe447' d='M5 9h5V5h12v4h5v14h-5v4H10v-4H5z'/%3E%3Cpath fill='%2305070e' d='M19 13h8v6h-8zM12 10h3v3h-3z'/%3E%3C/svg%3E" />
+    <title>Neon Nibbler · Maze Chase</title>
   </head>
   <body>
-    <!-- Game engine content belongs in content_layer when a game engine exists. -->
-    <div id="content_layer"></div>
-
-    <!-- Any UI, HTML, React, or user-interface content belongs in ui_layer. -->
-    <div id="ui_layer"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="ambient" aria-hidden="true"><svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M0 170h95l60 60v140h70M0 700h75l100-100v-90h50M0 210h65l50 50v60M1440 170h-95l-60 60v140h-70M1440 700h-75l-100-100v-90h-50M1440 210h-65l-50 50v60M90 900V780l70-70M1350 900V780l-70-70"/><circle cx="225" cy="370" r="5"/><circle cx="225" cy="510" r="5"/><circle cx="1215" cy="370" r="5"/><circle cx="1215" cy="510" r="5"/></g></svg></div>
+    <div id="ui_layer">
+      <header class="topbar">
+        <a class="brand corner upper-left" href="./" aria-label="Neon Nibbler home"><span class="brand-mark" aria-hidden="true">N<span>•</span>N</span><span class="brand-copy">NEON NIBBLER<small>AN ELECTRIC MAZE CHASE</small></span></a>
+        <nav class="corner upper-right" aria-label="Game links"><button id="help" class="text-button">HOW TO PLAY <span>↗</span></button><a class="repo-link" href="https://github.com/SamuelAsherRivello/babylon-lite-pacman-maze-chase-clone" target="_blank" rel="noopener noreferrer" aria-label="Source on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-14-2 16"/></svg></a></nav>
+      </header>
+      <main class="cabinet" aria-label="Neon Nibbler arcade game">
+        <div class="cabinet-head"><span class="eyebrow"><i></i> SINGLE PLAYER / ARCADE</span><span class="board-label" id="board-label">01 — THE CIRCUIT</span></div>
+        <section class="hud" aria-label="Game status"><div><span class="hud-label">SCORE</span><strong id="score">000000</strong></div><div><span class="hud-label">BEST</span><strong id="best">000000</strong></div><div class="life-stat"><span class="hud-label">LIVES</span><strong id="lives" aria-label="3 lives">◆ ◆ ◆</strong></div><div class="board-stat"><span class="hud-label">BOARD</span><strong id="board">01<span> / 03</span></strong></div></section>
+        <div class="screen" id="content_layer">
+          <canvas id="game" width="928" height="544" aria-label="Landscape neon maze; use arrow keys, WASD, or the directional pad"></canvas>
+          <section id="overlay" class="overlay" aria-labelledby="overlay-title">
+            <div class="overlay-card"><span class="eyebrow" id="overlay-kicker">READY TO GET LOST?</span><div class="hero-mascot" id="mascot" aria-hidden="true"><svg viewBox="0 0 60 52"><path fill="#ffe447" d="M12 10h8V4h22v6h8v8h6v26h-6v6H18v-6H8V18h4z"/><path fill="#070a13" d="M36 22h20v12H36zM25 14h6v6h-6z"/><path fill="#fff8b3" d="M17 14h5v7h-5z"/></svg></div><h1 id="overlay-title">NEON<br><span>NIBBLER</span></h1><p id="overlay-copy">Eat the dots. Outsmart the rivals.<br>Turn the chase around.</p><button id="primary" class="primary" disabled>CONNECTING… <span>→</span></button><p id="overlay-note" class="overlay-note">ARROWS / WASD TO MOVE · ENTER TO START</p></div>
+          </section>
+          <div id="ready" class="ready-badge" hidden aria-live="polite">READY!</div>
+        </div>
+        <section class="underboard"><div class="charge"><span class="eyebrow" id="charge-label">POWER UP. CHASE BACK.</span><div class="charge-track"><span id="charge-fill"></span></div><span class="charge-caption" id="pellet-count">COLLECT EVERY DOT TO ADVANCE</span></div><div class="hint"><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span><span class="hint-copy">MOVE<br><small>P TO PAUSE</small></span></div><div class="dpad" role="group" aria-label="Touch directional controls"><button data-dir="up" aria-label="Move up">↑</button><button data-dir="left" aria-label="Move left">←</button><button data-dir="down" aria-label="Move down">↓</button><button data-dir="right" aria-label="Move right">→</button></div></section>
+        <div class="cabinet-foot"><span class="rival-tag">MEET YOUR RIVALS</span><div class="rivals"><span><i class="red">▣</i> RIVET</span><span><i class="pink">◆</i> BLIP</span><span><i class="cyan">✚</i> FLUX</span><span><i class="orange">▲</i> EMBER</span></div><span class="edition">THREE MAZES. ONE MISSION.</span></div>
+      </main>
+      <footer class="page-foot"><div class="corner lower-left"><button id="pause" class="text-button" disabled>Ⅱ PAUSE</button><button id="mute" class="text-button" aria-pressed="false">♪ SOUND ON</button></div><span class="made-for">BUILT FOR THE CHASE</span><span id="version" class="corner lower-right">v0.0.2</span></footer>
+    </div>
+    <dialog id="instructions"><button id="close-help" aria-label="Close instructions" class="dialog-close">×</button><span class="eyebrow">THE RULES ARE SIMPLE</span><h2>STAY HUNGRY.<br><span>STAY MOVING.</span></h2><p>Clear every dot to advance through three original mazes. You have three lives.</p><div class="rules"><p><b>01 / NAVIGATE</b> Arrows, WASD, or the directional pad. Turns are buffered; reverse instantly.</p><p><b>02 / RECHARGE</b> Large corner pellets give six seconds of power. Catch rivals for 200, 400, 800, then 1,600 points.</p><p><b>03 / WATCH THE RIVALS</b> Rivet pursues, Blip intercepts, Flux patrols, and Ember wanders. They slow down and flee while powered.</p></div><p class="dialog-meta">ENTER: START / REPLAY · P / ESC: PAUSE<br>10 PER DOT · 50 PER POWER PELLET</p><button id="help-done" class="primary">GOT IT <span>→</span></button></dialog>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
