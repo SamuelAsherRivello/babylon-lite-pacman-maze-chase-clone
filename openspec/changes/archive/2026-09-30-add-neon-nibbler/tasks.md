@@ -16,7 +16,7 @@
 
 ## 4. Delivery
 - [x] 4.1 Document launch instructions, controls, original prompt/follow-up, provenance, and limitations; verify links and actual screenshot.
-- [ ] 4.2 Run production checks, push scoped work, release and deploy; verify the public game and release version.
-- [ ] 4.3 Sync accepted specifications and verify strict validation, complete delivery evidence, and readiness for archival and scoped Git synchronization. Archive and final Git alignment follow as workflow finalization.
+- [x] 4.2 Run production checks, push scoped work, release and deploy; verify the public game and release version.
+- [x] 4.3 Sync accepted specifications and verify strict validation, complete delivery evidence, and readiness for archival and scoped Git synchronization. Archive and final Git alignment follow as workflow finalization.
 
-Local implementation and verification are complete. Both main specifications are synchronized and pass strict validation. The user approved deployment on 2026-09-30. Public verification, archival, and Git alignment are in progress.
+Implementation and public verification are complete. Both main specifications match the delta requirements and pass strict validation. Release v0.0.3 and Pages deployment succeeded after explicit user approval on 2026-09-30. Public checks covered WebGPU, keyboard movement/scoring, pause/resume, game over/replay, touch, both phone orientations, production test-hook exclusion and clean runtime logs. See project-name/documentation/delivery-status.md for evidence. Archive and scoped final Git synchronization follow as workflow finalization.

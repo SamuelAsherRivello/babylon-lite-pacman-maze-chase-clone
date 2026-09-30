@@ -111,7 +111,7 @@ Node/npm/Vite baseline that may be retained or replaced deliberately.
       baseline patch-only release workflow.
 - [x] Document the real release process, including versioning and deployment
       verification, in the README.
-- [ ] Confirm that the README demo URL is live before replacing its placeholder.
+- [x] Confirm that the README demo URL is live before replacing its placeholder.
 
 ## 7. Delivery gate
 
@@ -144,4 +144,4 @@ Node/npm/Vite baseline that may be retained or replaced deliberately.
 - All shared-library skills are present; bundled generated OpenSpec overlaps are retained. Metadata and OpenSpec CLI were checked; editor autocomplete itself was not programmatically inspected.
 - Local validation: clean npm ci, 18 rule tests, production build, and seven Chromium WebGPU browser scenarios.
 - Cleanup is optional; this checklist remains available for review.
-- Publication is pending explicit approval after automatic review blocked committing/pushing main and release dispatch. Public-demo verification remains open.
+- The user approved publication on 2026-09-30. Release v0.0.3 and GitHub Pages deployment succeeded; public WebGPU, keyboard, scoring, pause, failure/replay, touch and landscape/portrait layout checks passed without runtime errors.

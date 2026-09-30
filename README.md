@@ -8,9 +8,9 @@ An original single-player arcade maze chase, built with **Babylon Lite and WebGP
 
 ## Play
 
-The verified game is available locally. Public release and deployment are pending publishing approval.
+Neon Nibbler v0.0.3 is live on GitHub Pages. Play in a WebGPU-capable browser with keyboard or touch controls.
 
-[Planned live demo](https://samuelasherrivello.github.io/babylon-lite-pacman-maze-chase-clone/)
+[Play Neon Nibbler](https://samuelasherrivello.github.io/babylon-lite-pacman-maze-chase-clone/)
 
 Requires a WebGPU-capable browser and graphics device. Chrome/Edge with hardware acceleration is the verified browser path. Unsupported devices receive an explanation and retry action.
 
